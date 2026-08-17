@@ -72,8 +72,11 @@ p {
 
 .nav-links {
     display: flex;
-    gap: 40px;
-    list-style: none;
+    gap: 30px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
 }
 
 .nav-links a {
