@@ -39,10 +39,11 @@ function About() {
           <div>
             <h3 className="absubtitle">Skills</h3>
             <p className="abinfo">
-              • Java & Python Programming <br />
-              • Object Oriented Programming<br />
-              • PowerAutomate <br />
-              • React | CSS 
+              <strong>Programming:</strong> Python, Java, C/C++, OOP, Data Structures & Algorithms <br />
+              <strong>AI & Computer Vision:</strong> Machine Learning, CNN, YOLOv8 <br />
+              <strong>Databases & Tools:</strong> SQL, Git, SharePoint <br />
+              <strong>Networking & IT Support:</strong> Subnetting, Hardware Setup, Troubleshooting, Ticket Management <br />
+              <strong>Systems & Security:</strong> System Administration, IT Security & Compliance, Technical Documentation
             </p>
           </div>
         </div>
