@@ -1,0 +1,455 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#e6e6e6;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.section {
+    scroll-margin-top: 80px;
+}
+
+button {
+    /* Let padding define the button size instead of vw width/height */
+    padding: 10px 22px;
+    width: auto;
+    height: auto;
+    
+    margin-right: 10px;
+    margin-bottom: 10px; /* Helps when buttons stack on smaller screens */
+    border-radius: 4em;
+    
+    /* Reset Default Browser Styles */
+    border: none;
+    cursor: pointer;
+    
+    /* Perfect Center Alignment */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Design & Typography */
+    background-color: #567257;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    
+    /* Smooth Animation on Hover */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+p {
+  margin-bottom: 0; /* Removes space below the header */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background: #567257;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38BDF8;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+/* HERO */
+/* Base Styles (Place this FIRST) */
+.hero {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("./assets/images/nobg.png");
+    background-size: cover;
+    background-position: center;
+    color: #567257;
+    min-height: 100vh;
+    align-content: center;
+    width: 100%;   
+}
+
+.hero-desc {
+    margin-top: 0px;
+    padding: 0px;
+    margin-left: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Adds clean spacing between buttons */
+}
+
+.descbut1, .descbut2 {
+    font-size: 14px;
+    margin: 0px; /* Prevents stray margins from throwing off button alignment */
+}
+
+/* Mobile Overrides (Place this at the VERY BOTTOM of your CSS file) */
+@media (max-width: 768px) {
+    .hero {
+        background-position: 40% center; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box; 
+        padding-top: 80px; 
+    }
+
+    .hero-content {
+        align-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: calc(100% - 40px);
+    }
+
+    .hero-name {
+        font-size: 8vw;
+        line-height: 1.1;
+    }
+    
+    /* Stacks buttons vertically on mobile screens */
+    .hero-desc {
+        margin-top: 20px;
+        margin-left: 4vw;          /* Matches text alignment on mobile */
+        flex-direction: column;  /* Moves second button directly under first */
+        align-items: flex-start; /* Aligns stacked buttons to the left */
+        max-width: 180px;        /* Limits container width so it stays compact */
+    }
+}
+
+.hero-content{
+    align-content: center;
+    margin-left: 4vw;
+    max-width:900px;
+}
+
+.hero-greeting{
+    font-size:2vw;
+}
+
+.hero-name{
+    word-wrap: nowrap;
+    font-size:8vw;
+    font-weight:800;
+    margin-bottom: 5px;
+}
+
+
+/*About*/
+#about {
+    background-color: #567257;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.abcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 50px auto 0;
+    box-sizing: border-box;
+}
+
+.abbox {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.about-header {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-intro {
+    text-align: center;
+    font-size: 17px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.absubtitle {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Clean separating line */
+    padding-bottom: 6px;
+}
+
+.abinfo {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0; /* Reset margins so flexbox handles alignment */
+}
+
+/*Experience*/
+
+#experience {
+    background-image: url("./assets/images/BTr.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+}
+
+.exp-header-container {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.exp-main-heading {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+}
+
+.expbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Left text block column */
+.exp-text-side {
+    flex: 1 1 500px;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    padding: 35px;
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-sizing: border-box;
+}
+.exp-text-side h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+
+.expinfo {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Right image column */
+.expimg {
+    flex: 0 0 auto;        /* Prevents the image container from distorting */
+    width: 320px;          /* Clean fixed sizing bounds */
+    height: 320px;          /* Mainally preserves the original picture aspect ratio */
+    border-radius: 8px;    /* Optional neat accent edge styling */
+    object-fit: contain;
+}
+/*Projects*/
+
+#projects {
+    background: #567257;
+    min-height: 40rem;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.proj-main-heading {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.proj-intro {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 50px;
+    opacity: 0.9;
+}
+
+.proj-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Space between each project row */
+    box-sizing: border-box;
+}
+
+/* Individual Project Row */
+.project-item {
+    display: flex;
+    flex-wrap: wrap;       /* Responsive wrapping for small viewports */
+    align-items: flex-start; /* Aligns text top and image top perfectly */
+    gap: 40px;             /* Distance between text block and image */
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider between items */
+}
+
+/* Removes line from the last project item */
+.project-item:last-child {
+    border-bottom: none;
+}
+
+/* Text structure column */
+.project-text-side {
+    flex: 1 1 500px;
+}
+
+.project-text-side h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.proj-info {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Image column layout */
+.proj-img {
+    flex: 0 0 auto;
+    width: 320px;          /* Clean uniform sizing bounds */
+    height: 180px;         /* Standard 16:9 box for software/web snapshots */
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.1); /* Stand-in box color if image is empty */
+}
+
+/*Contacts*/
+
+#contact {
+    text-align: center;
+    color: #2c3e50; /* Dark gray for clean readability on your light grey background */
+    background: #e6e6e6;
+    padding: 60px 20px;
+    min-height: 20vh;
+}
+
+.contactitle {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+/* Flex row keeps your contact pills aligned side-by-side */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows row wrapping cleanly when minimized */
+    gap: 16px;       /* Even spacing between pills */
+    margin-bottom: 35px;
+}
+
+/* Upgraded button styling */
+.contactbut {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    /* White bubble pill design */
+    background-color: #ffffff;
+    color: #333333;
+    text-decoration: none; /* Removes anchor underline */
+    
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover effects */
+.contactbut:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px); /* Subtle physical lift */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Email layout area */
+.contact-email p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.email-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #567257; /* Uses your signature brand green color */
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.email-text:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
